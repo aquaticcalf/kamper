@@ -5,7 +5,17 @@ product:
 dependencies:
   - $compose.foundation: exported
   - $compose.material3: exported
+  - org.jetbrains.compose.material:material-icons-extended:1.7.3: exported
+  - cafe.adriel.voyager:voyager-navigator:1.1.0-beta02: exported
+  - cafe.adriel.voyager:voyager-transitions:1.1.0-beta02: exported
+  - androidx.room:room-runtime:2.7.0-alpha12
+  - androidx.sqlite:sqlite-bundled:2.5.0-alpha12
+  - org.jetbrains.kotlinx:kotlinx-datetime:0.7.1-0.6.x-compat
 
 settings:
   compose:
     enabled: true
+  kotlin:
+    ksp:
+      processors:
+        - androidx.room:room-compiler:2.7.0-alpha12
